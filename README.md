@@ -218,11 +218,10 @@ public class JDBC {
 ```bash
 adb shell dumpsys activity activities | grep mFocusedActivity
 
-```
-
 Here's a breakdown of what this command does:
 
-- **adb shell**: Executes the following command on the connected Android device.
-- **dumpsys activity activities**: Prints information about all running activities.
-- **grep mFocusedActivity**: Filters the output to only show lines containing mFocusedActivity.
-- use **findstr** in case if you are using Window Operating System
+    1. **adb shell**: Executes the following command on the connected Android device.
+    2. **dumpsys activity activities**: Prints information about all running activities.
+    3. **grep mFocusedActivity**: Filters the output to only show lines containing mFocusedActivity.
+    4. use **findstr** in case if you are using Window Operating System
+```
