@@ -3,8 +3,6 @@
 <details>
 <summary>1. Web Application Automation</summary>
 
-#### 1. Web Application Automation
-
 - **Development approach**
 
   1. TDD : Test Driven Development
