@@ -46,51 +46,51 @@
 <details>
 <summary>2. Mobile Application Automation</summary>
 
-- Development approach
+- **Development approach**
 
   1. TDD : Test Driven Development
   1. DDD : Data Driven Development
   1. BDD : Behavior Driven Development
   1. Hybrid Development
 
-- Automation Design pattern
+- **Automation Design pattern**
 
   1. POM : Page Object Model
   1. PFM : Page Factory Model
 
-- Programming Languages
+- **Programming Languages**
   1. Java
-- Automation Tools / Libraries
+- **Automation Tools / Libraries**
 
   1. Appium
   1. Selenium
   1. Cucumber
 
-- Devices
+- **Devices**
 
   1. Android - Real / Emulator devices
   1. iOS - Real / Simulator devices
 
-- Test Frameworks
+- **Test Frameworks**
 
   1. TestNG (for Java)
   2. JUnit (for Java)
 
-- Build Tools
+- **Build Tools**
 
   1. Maven (for Java)
 
-- Extras
+- **Extras**
 
   1. Extent Reports Library : for generating test reports
   1. Apache POI (for Java) : for reading / writing excel or csv files
 
-- Appium - Android Architecture
+- **Appium - Android Architecture**
 <p align="center">
     <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*0jcsqDOGkceEjYoRJxctnQ.jpeg" />
 </p>
 
-- Android Capabilities
+- **Android Capabilities**
   ```json
   {
     "platformName": "Android",
@@ -102,12 +102,12 @@
     "appium:activityName": "" #required when app is not mentioned
   }
   ```
-- Appium - iOS Architecture
+- **Appium - iOS Architecture**
 <p align="center">
     <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*9AHKmwXiFi2vvwBzC5pxpw.jpeg" />
 </p>
 
-- iOS Capabilities
+- **iOS Capabilities**
   ```json
   {
     "platformName": "iOS",
@@ -124,7 +124,7 @@
     "appium:autoAcceptAlerts" : true
   }
   ```
-- Find the Android App's package name and activity name from the output.
+- **Find the Android App's package name and activity name from the output**
 
 ```bash
 adb shell dumpsys activity activities | grep mFocusedActivity
@@ -137,68 +137,68 @@ Here's a breakdown of what this command does:
     4. use **findstr** in case if you are using Window Operating System
 ```
 
+---
+
 </details>
 
 <details>
 <summary>3. API Automation</summary>
 
-- Development approach
+- **Development approach**
 
   1. TDD : Test Driven Development
   1. BDD : Behavior Driven Development
 
-- Programming Languages
+- **Programming Languages**
 
   1. Java
 
-- Automation Tools / Libraries
+- **Automation Tools / Libraries**
 
   1. Rest Assured
   1. Cucumber
 
-- Test Frameworks
+- **Test Frameworks**
 
   1. TestNG (for Java)
   2. JUnit (for Java)
 
-- Build Tools
+- **Build Tools**
 
   1. Maven
 
-- Extras
+- **Extras**
   1. Extent Reports Library : for generating test reports
   1. Apache POI (for Java) : for reading / writing excel or csv files
+
+---
 
 </details>
 
 <details>
 <summary>4. Database Automation</summary>
 
-- Tools / Libraries
+- **Tools / Libraries**
 
   1. Java
   1. JDBC
 
-- Databases
+- **Databases**
 
   1. MySQL
   1. Oracle SQL Developer
   1. Microsoft SQL Server
 
-- Class.forName(driver)
+- **Connection strings and Class paths**
+  | Database | Class.forName() | Connection String | Port |
+  | :------------------- | :------------------------------------------- | :---------------------------------- | :--: |
+  | MySQL | com.mysql.jdbc.Driver | jdbc:mysql://IP_ADDESS:PORT/DB_NAME | 3306 |
+  | Oracle SQL Developer | oracle.jdbc.driver.OracleDriver | jdbc:oracle:thin:@IP_ADDESS:PORT:xe | 1521 |
+  | Microsoft SQL Server | com.microsoft.sqlserver.jdbc.SQLServerDriver | jdbc:sqlserver://IP_ADDESS:PORT | 0000 |
 
-  1. MySQL : "com.mysql.jdbc.Driver"
-  1. Oracle : "oracle.jdbc.driver.OracleDriver"
-  1. MS : "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+`Note` : The full connection string for MS SQL Server = `jdbc:sqlserver://IP_ADDESS:PORT;databaseName=DB_NAME;user=USERNAME;password=PASSWORD`
 
-- Connection string
-
-  1. MySQL : "jdbc:mysql://IP_ADDESS:PORT/DB_NAME" # commonly used port : 3306
-  1. Oracle : "jdbc:oracle:thin:@IP_ADDESS:PORT:xe" # commonly used port : 1521
-  1. MySQL : "jdbc:sqlserver://IP_ADDESS:PORT;databaseName=DB_NAME;user=USERNAME;password=PASSWORD;
-     "
-
-- Example Code
+- **Example Java Code**
 
 ```java
 
@@ -240,9 +240,3 @@ public class JDBC {
 ```
 
 </details>
-
-| Database             | Class.forName()                              | Connection String                   | Port |
-| :------------------- | :------------------------------------------- | :---------------------------------- | :--: |
-| MySQL                | com.mysql.jdbc.Driver                        | jdbc:mysql://IP_ADDESS:PORT/DB_NAME | 3306 |
-| Oracle SQL Developer | oracle.jdbc.driver.OracleDriver              | jdbc:oracle:thin:@IP_ADDESS:PORT:xe | 1521 |
-| Microsoft SQL Server | com.microsoft.sqlserver.jdbc.SQLServerDriver | jdbc:sqlserver://IP_ADDESS:PORT     | 0000 |
