@@ -117,6 +117,7 @@
   1. JDBC
 
 - Databases
+
   1. MySQL
   1. Oracle SQL Developer
   1. Microsoft SQL Server
@@ -134,10 +135,52 @@
   1. MS : "com.microsoft.sqlserver.jdbc.SQLServerDriver"
 
 - Connection string
+
   1. MySQL : "jdbc:mysql://IP_ADDESS:PORT/DB_NAME" # commonly used port : 3306
   1. Oracle : "jdbc:oracle:thin:@IP_ADDESS:PORT:xe" # commonly used port : 1521
   1. MySQL : "jdbc:sqlserver://IP_ADDESS:PORT;databaseName=DB_NAME;user=USERNAME;password=PASSWORD;
      "
+
+- Example Code
+
+```java
+
+import java.sql.*
+
+public class JDBC {
+
+    String url = "jdbc:mysql://localhost:3306/mydatabase";
+    String user = "username";
+    String password = "password";
+
+    // JDBC variables for managing connection and query execution
+    Connection connection = null;
+    Statement statement = null;
+    ResultSet resultSet = null;
+
+    public static void main(String[] args) {
+
+        // add the driver to class path
+        Class.forName("database.driver.classpath");
+
+        // Establishing connection to the database
+        connection = DriverManager.getConnection(url, user, password);
+
+        // Creating a statement object
+        statement = connection.createStatement();
+
+        // Executing a SQL query
+        String query = "SELECT * FROM mytable";
+        resultSet = statement.executeQuery(query);
+
+        while (resultSet.next()) {
+           // To you implementation
+        }
+    }
+}
+
+
+```
 
 #### Appium's Capabilities
 
@@ -158,12 +201,15 @@
   {
     "platformName": "iOS",
     "appium:platformVersion": "14.5",
-    "appium:deviceName": "simulator name",
-    "appium:udid": "real device id", # required if dealing with real devices
-    "appium:automationName": "XCUiTest",
-    "appium:app": "path to app",
+    "appium:deviceName": "simulator name", # only required when dealing with simulators
+    "appium:udid": "real device id", # only required when dealing with real devices
+    "appium:automationName": "XCUITest",
+    "appium:app": "path to app", #full path to the app to be tested, it can also be a URL. Extensions are “.ipa” for real devices and “.app” for Simulators.
     "appium:packageName": "", #required when app is not mentioned
     "appium:activityName": "", #required when app is not mentioned
-    "appium:bundleId": "com.yourcompany.yourapp"
+    "appium:bundleId": "com.yourcompany.yourapp",
+    "appium:autoGrantPermissions" : true,
+    "appium:androidInstallTimeout" : 60,
+    "appium:autoAcceptAlerts" : true
   }
   ```
