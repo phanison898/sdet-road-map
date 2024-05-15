@@ -174,7 +174,7 @@ public class JDBC {
         resultSet = statement.executeQuery(query);
 
         while (resultSet.next()) {
-           // To you implementation
+           // do your implementation
         }
     }
 }
@@ -213,3 +213,16 @@ public class JDBC {
     "appium:autoAcceptAlerts" : true
   }
   ```
+- Find the Android App's package name and activity name from the output.
+
+```bash
+adb shell dumpsys activity activities | grep mFocusedActivity
+
+```
+
+Here's a breakdown of what this command does:
+
+- **adb shell**: Executes the following command on the connected Android device.
+- **dumpsys activity activities**: Prints information about all running activities.
+- **grep mFocusedActivity**: Filters the output to only show lines containing mFocusedActivity.
+- use **findstr** in case if you are using Window Operating System
