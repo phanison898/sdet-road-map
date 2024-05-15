@@ -184,6 +184,11 @@ public class JDBC {
 
 #### Appium's Capabilities
 
+- Appium - Android Architecture
+<p align="center">
+    <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*0jcsqDOGkceEjYoRJxctnQ.jpeg" />
+</p>
+
 - Android Capabilities
   ```json
   {
@@ -196,6 +201,11 @@ public class JDBC {
     "appium:activityName": "" #required when app is not mentioned
   }
   ```
+- Appium - iOS Architecture
+<p align="center">
+    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*9AHKmwXiFi2vvwBzC5pxpw.jpeg" />
+</p>
+
 - iOS Capabilities
   ```json
   {
