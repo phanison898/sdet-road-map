@@ -119,7 +119,10 @@
     "appium:bundleId": "com.yourcompany.yourapp",
     "appium:autoGrantPermissions" : true,
     "appium:androidInstallTimeout" : 60,
-    "appium:autoAcceptAlerts" : true
+    "appium:autoAcceptAlerts" : true,
+    "appium:xcodeOrgId" : "", # real device | dev team will give
+    "appium:updateWDABundleId" : "", # real device | dev team will give
+    "appium:xcodeSigningId" : "iPhone developer" # real device
   }
   ```
 - **Find the Android App's package name and activity name from the output**
